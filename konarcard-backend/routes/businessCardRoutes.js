@@ -150,7 +150,7 @@ router.post('/create_business_card', upload, async (req, res) => {
 
 const getBusinessCardByUserId = async (req, res) => {
     try {
-        const card = await BusinessCard.findOne({ user: req.params.userId });
+        const card = await BusinessCard.findOne({ user: req.query.userId });
         if (!card) return res.status(404).json({ error: 'Business card not found' });
         res.status(200).json(card);
     } catch (err) {

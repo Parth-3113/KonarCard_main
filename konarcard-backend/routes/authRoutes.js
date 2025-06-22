@@ -31,7 +31,7 @@ router.post('/logout', logoutUser);
 router.post('/verify-email', verifyEmailCode);
 router.post('/resend-code', resendVerificationCode);
 router.post('/forgot-password', forgotPassword);
-router.put('/update-profile', updateProfile);
+router.post('/update-profile', updateProfile);
 router.delete('/delete-account', deleteAccount);
 router.post('/subscribe', subscribeUser);
 router.post('/cancel-subscription', cancelSubscription);

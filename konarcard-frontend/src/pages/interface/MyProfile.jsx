@@ -25,10 +25,10 @@ export default function MyProfile() {
   const queryClient = useQueryClient();
 
   const { data: authUser, refetch: refetchAuthUser } = useAuthUser();
-  const userId = authUser?.data?._id;
-  const userEmail = authUser?.data?.email;
-  const isUserVerified = authUser?.data?.isVerified;
-  const userUsername = authUser?.data?.username; // Get username for profile URL
+  const userId = authUser?._id;
+  const userEmail = authUser?.email;
+  const isUserVerified = authUser?.isVerified;
+  const userUsername = authUser?.username; // Get username for profile URL
 
   const { data: businessCard } = useFetchBusinessCard(userId);
 
